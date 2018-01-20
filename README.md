@@ -14,7 +14,7 @@
  
  ## Prefarable Hardware Requirements ##
  1. CPU (Intel i7,8GB RAM)or GPU (if you cannot prefer this configuration, try Google Cloud Platform of free $300 credits) to train           the model.
- ### If any of specification did'nt adapt you .Dont worry continue as much as you can .But there may be a delay in training the model and building the app. ###
+ **If any of specification did'nt adapt you .Dont worry continue as much as you can .But there may be a delay in training the model and building the app.**
  
  **Core Functionality**
 + `xml_to_csv.py` - This code is used to convert the collection of xml of the images to a single csv file.
@@ -44,4 +44,4 @@ Visit the Link: https://www.skcript.com/svr/realtime-object-and-face-detection-i
 
 **OUTPUT ( Visit the Link )**: https://vimeo.com/250737672
 
-I hope you understand quite a lot from the tutorial to make your independent tensorflow app .If you need any help or issue kindly raise a issue in the repo and we will return you shorlty.Happy Coding !
+I hope you understand quite a lot from the tutorial to make your independent tensorflow app .If you need any help or issue kindly raise a issue in the repo and we will return you shortlty.Happy Coding !
