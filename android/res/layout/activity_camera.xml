@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+ Copyright 2016 The TensorFlow Authors. All Rights Reserved.
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="org.tensorflow.demo.CameraActivity" >
+
+    <ImageView
+        android:id="@+id/player_image"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:src="@drawable/blank_image"
+        android:layout_marginTop="480dp"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_marginTop="480dp"
+        android:layout_marginLeft="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name:" />
+
+    <TextView
+        android:id="@+id/name_e"
+        android:layout_marginTop="480dp"
+        android:layout_marginLeft="150dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/age"
+        android:layout_marginTop="480dp"
+        android:layout_marginLeft="230dp"
+        android:text="Age:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/age_e"
+        android:layout_marginTop="480dp"
+        android:layout_marginLeft="260dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/team_name"
+        android:layout_marginTop="500dp"
+        android:layout_marginLeft="100dp"
+        android:text="Team Name:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/team_name_e"
+        android:layout_marginTop="500dp"
+        android:layout_marginLeft="180dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/player"
+        android:layout_marginTop="520dp"
+        android:layout_marginLeft="100dp"
+        android:text="Player:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/player_e"
+        android:layout_marginTop="520dp"
+        android:layout_marginLeft="140dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/strike_rate"
+        android:layout_marginTop="540dp"
+        android:layout_marginLeft="100dp"
+        android:text="S/R:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/strike_rate_e"
+        android:layout_marginTop="540dp"
+        android:layout_marginLeft="130dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/runs"
+        android:layout_marginTop="540dp"
+        android:layout_marginLeft="180dp"
+        android:text="Runs:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/runs_e"
+        android:layout_marginTop="540dp"
+        android:layout_marginLeft="220dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/wicket"
+        android:layout_marginTop="540dp"
+        android:layout_marginLeft="280dp"
+        android:text="Wickets:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/wicket_e"
+        android:layout_marginTop="540dp"
+        android:layout_marginLeft="340dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/match"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next Match:"
+        android:layout_marginTop="560dp"
+        android:layout_marginLeft="100dp"/>
+    <TextView
+        android:id="@+id/match_e"
+        android:layout_marginTop="560dp"
+        android:layout_marginLeft="200dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</FrameLayout>
