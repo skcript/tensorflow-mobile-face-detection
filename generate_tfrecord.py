@@ -37,18 +37,23 @@ def class_text_to_int(row_label):
 
 
 def split(df, group):
+    # Spliting the object from the files
     data = namedtuple('data', ['filename', 'object'])
     gb = df.groupby(group)
     return [data(filename, gb.get_group(x)) for filename, x in zip(gb.groups.keys(), gb.groups)]
 
 
 def create_tf_example(group, path):
+    # Opening and readinf the files
     with tf.gfile.GFile(os.path.join(path, '{}'.format(group.filename)), 'rb') as fid:
         encoded_jpg = fid.read()
+    # Encode the image in jpeg format to array values
     encoded_jpg_io = io.BytesIO(encoded_jpg)
     image = Image.open(encoded_jpg_io)
+    # Setting up the image size
     width, height = image.size
-
+    
+    #Creating the boundary box coordinate instances such as xmin,ymin,xmax,ymax
     filename = group.filename.encode('utf8')
     image_format = b'jpg'
     xmins = []
@@ -65,7 +70,8 @@ def create_tf_example(group, path):
         ymaxs.append(row['ymax'] / height)
         classes_text.append(row['class'].encode('utf8'))
         classes.append(class_text_to_int(row['class']))
-
+        
+    # This is already exisiting code to convert csv to tfrecord
     tf_example = tf.train.Example(features=tf.train.Features(feature={
         'image/height': dataset_util.int64_feature(height),
         'image/width': dataset_util.int64_feature(width),
@@ -84,8 +90,11 @@ def create_tf_example(group, path):
 
 
 def main(_):
+    # Creating a TFRecordWriter instance
     writer = tf.python_io.TFRecordWriter(FLAGS.output_path)
+    #selecting the path to the image folder
     path = os.path.join(os.getcwd(), 'images')
+    # Reading the csv from the data folder
     examples = pd.read_csv(FLAGS.csv_input)
     grouped = split(examples, 'filename')
     for group in grouped:
@@ -93,6 +102,7 @@ def main(_):
         writer.write(tf_example.SerializeToString())
 
     writer.close()
+    # After the successful conversion the message prompts
     output_path = os.path.join(os.getcwd(), FLAGS.output_path)
     print('Successfully created the TFRecords: {}'.format(output_path))
 
